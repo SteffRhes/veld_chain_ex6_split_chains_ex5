@@ -1,0 +1,1 @@
+valid xml, without xsd check

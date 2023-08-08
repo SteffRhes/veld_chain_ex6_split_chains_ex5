@@ -1,0 +1,35 @@
+x-veld:
+  chain:
+    about:
+      description: "dummy veld for testing and showcasing"
+
+services:
+  veld_db:
+    extends:
+      file: ./veld_executable_ex4_basex/veld.yaml
+      service: veld
+    volumes:
+      - ./veld_data_ex3_basex/db_data:/veld/storage
+    networks:
+      - basex_network 
+
+  veld_load:
+    extends:
+      file: ./veld_executable_ex5_load_to_basex/veld.yaml
+      service: veld
+    volumes:
+      - ./data_tmp/data.xml:/veld/input/data.xml
+    environment:
+      user: "admin"
+      password: "admin"
+      host: "veld_db:8984"
+      database_name: "veld_dummy_database"
+    networks:
+      - basex_network 
+    depends_on:
+      veld_db:
+        condition: service_healthy
+
+networks:
+  basex_network:
+

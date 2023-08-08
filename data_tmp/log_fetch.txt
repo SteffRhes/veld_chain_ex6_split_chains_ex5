@@ -1,0 +1,4 @@
+Connecting to dummyjson.com (104.196.232.237:443)
+saving to '/veld/output/a/data.json'
+data.json            100% |********************************|   398  0:00:00 ETA
+'/veld/output/a/data.json' saved
