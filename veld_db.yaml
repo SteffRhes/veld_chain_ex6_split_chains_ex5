@@ -9,7 +9,7 @@ services:
       file: ./veld_executable_ex4_basex/veld.yaml
       service: veld
     volumes:
-      - ./veld_data_ex3_basex/db_data:/veld/storage
+      - ./veld_data_ex3_basex/db_data/:/veld/storage/
     networks:
       - basex_network 
 
