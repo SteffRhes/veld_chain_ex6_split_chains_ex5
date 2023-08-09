@@ -9,8 +9,9 @@ services:
       file: ./veld_executable_ex1_fetch_json/veld.yaml
       service: veld
     volumes:
-      - ./data_tmp/data.json:/veld/output/a/data.json
-      - ./data_tmp/log_fetch.txt:/veld/output/b/log.txt
+      - ./data_tmp/data.json:/veld/output/data.json
+    environment:
+      id: "48"
 
   veld_convert:
     extends:
