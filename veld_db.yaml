@@ -1,0 +1,18 @@
+x-veld:
+  chain:
+    about:
+      description: "example veld for testing and showcasing"
+
+services:
+  veld_db:
+    extends:
+      file: ./veld_executable_ex4_basex/veld.yaml
+      service: veld
+    volumes:
+      - ./veld_data_ex3_basex/db_data:/veld/storage
+    networks:
+      - basex_network 
+
+networks:
+  basex_network:
+
