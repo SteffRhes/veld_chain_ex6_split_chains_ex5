@@ -2,6 +2,7 @@ x-veld:
   chain:
     about:
       description: "example veld for testing and showcasing"
+      topics: "data persistence"
 
 services:
   veld_db:
@@ -13,6 +14,7 @@ services:
     networks:
       - basex_network 
 
+# The network must be defined in both files, so that the services of each file can connect to it
 networks:
   basex_network:
 

@@ -2,6 +2,7 @@ x-veld:
   chain:
     about:
       description: "example veld for testing and showcasing"
+      topics: "ETL"
 
 services:
   veld_fetch:
@@ -52,6 +53,7 @@ services:
       veld_validate:
         condition: service_completed_successfully
 
+# The network must be defined in both files, so that the services of each file can connect to it
 networks:
   basex_network:
 
